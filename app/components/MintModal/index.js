@@ -1,6 +1,4 @@
-import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { useAppContext } from '../../context/context'
 
 const styles = {
   wrapper: `bg-[#212121] text-white flex flex-col p-[1.4rem] h-[20rem] w-[26rem] rounded-[1rem]`,
@@ -12,17 +10,8 @@ const styles = {
 
 const index = () => {
   const [ipfsUri, setIpfsUri] = useState('')
-  const { mintNft } = useAppContext()
-  const router = useRouter()
 
-  const handleMintClick = async () => {
-    if (!ipfsUri) return
-
-    await mintNft(ipfsUri)
-
-    setIpfsUri('')
-    router.push('/')
-  }
+  const handleMintClick = async () => {}
 
   return (
     <div className={styles.wrapper}>
@@ -36,7 +25,9 @@ const index = () => {
         value={ipfsUri}
         onChange={event => setIpfsUri(event.target.value)}
       />
-      <button className={styles.button}  onClick={handleMintClick}>Mint my NFT</button>
+      <button className={styles.button} onClick={handleMintClick}>
+        Mint my NFT
+      </button>
     </div>
   )
 }

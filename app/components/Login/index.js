@@ -1,5 +1,3 @@
-import { useAppContext } from '../../context/context'
-
 const styles = {
   wrapper:
     'flex min-h-screen items-center justify-center bg-[#1d1d1d] text-gray-200',

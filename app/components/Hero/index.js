@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Modal from 'react-modal'
-import { useAppContext } from '../../context/context'
 import { modalStyles } from '../../lib/ModalStyles'
 import { MintModal } from '../index'
 
@@ -18,7 +17,6 @@ const styles = {
 }
 
 const Hero = () => {
-  const { nftData } = useAppContext()
   const router = useRouter()
 
   return (
@@ -35,7 +33,6 @@ const Hero = () => {
           <Link href='/?mint=1'>
             <button className={styles.mintButton}>Mint Your NFT 0.1 ETH</button>
           </Link>
-          {!!nftData.length && <p>{nftData.length} minted already</p>}
         </div>
       </div>
       <Modal

@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import { Header, NFTDisplay, Hero, Login } from '../components'
-import { useAppContext } from '../context/context'
 
 const Home = () => {
-  const { currentWalletAddress } = useAppContext()
+  const currentWalletAddress = false
 
   const styles = {
     wrapper: 'flex h-[100vh] w-[100vw] bg-[#1d1d1d] text-gray-200',
@@ -16,6 +15,7 @@ const Home = () => {
 
   if (currentWalletAddress === '') {
     return <Login />
+
   } else {
     return (
       <div className={styles.wrapper}>

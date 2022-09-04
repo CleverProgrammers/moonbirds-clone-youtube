@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { useAppContext } from '../../context/context'
 
 const styles = {
   wrapper:
@@ -10,8 +9,6 @@ const styles = {
 }
 
 const NFTDisplay = () => {
-  const { nftData } = useAppContext()
-
   const nfts = [
     '/3574.png',
     '/4697.png',
@@ -22,9 +19,9 @@ const NFTDisplay = () => {
 
   return (
     <div className={styles.wrapper}>
-      {nftData.map((nft, index) => (
+      {nfts.map((nft, index) => (
         <div key={index} className={styles.imageContainer}>
-          <Image className={styles.nftImage} src={nft.image} layout='fill' />
+          <Image className={styles.nftImage} src={`/images${nft}`} layout='fill' />
         </div>
       ))}
     </div>

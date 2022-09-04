@@ -4,7 +4,6 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { MenuIcon } from '@heroicons/react/outline'
 import Modal from 'react-modal'
-import { useAppContext } from '../../context/context'
 import { classNames } from '../../utils/classNames'
 import { modalStyles } from '../../lib/ModalStyles';
 import Logo from './Logo'
@@ -39,9 +38,8 @@ const transitions = {
   menuLeaveTo: 'transform opacity-0 scale-95',
 }
 
-const Header = ({ isAdmin, inAllowlist, joinAllowlist, downloadAllowlist }) => {
+const Header = () => {
   const router = useRouter()
-  const { disconnectWalletHandler, getUris } = useAppContext()
 
   return (
     <header className={styles.wrapper}>
@@ -55,7 +53,7 @@ const Header = ({ isAdmin, inAllowlist, joinAllowlist, downloadAllowlist }) => {
           <Link href='/?mint=1'>
             <li className={styles.navItem}>Mint</li>
           </Link>
-          <div className={styles.navItem} onClick={getUris}>
+          <div className={styles.navItem}>
             Get URIs
           </div>
         </ul>
@@ -81,7 +79,6 @@ const Header = ({ isAdmin, inAllowlist, joinAllowlist, downloadAllowlist }) => {
                 <Menu.Item>
                   {({ active }) => (
                     <button
-                      onClick={disconnectWalletHandler}
                       className={classNames(
                         active ? styles.buttonActive : styles.buttonInactive,
                         styles.menuItem,
