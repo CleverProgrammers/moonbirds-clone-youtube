@@ -4,14 +4,10 @@ const styles = {
   button: 'rounded-xl border px-10 py-5',
 }
 
-const Login = ({ login }) => {
-  const { connectWalletHandler } = useAppContext()
-
+const Login = () => {
   return (
     <div className={styles.wrapper}>
-      <button className={styles.button} onClick={connectWalletHandler}>
-        Connect with Metamask
-      </button>
+      <button className={styles.button}>Connect with Metamask</button>
     </div>
   )
 }
