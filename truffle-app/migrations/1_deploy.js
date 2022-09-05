@@ -1,6 +1,6 @@
-var MyMoonBirds = artifacts.require('MyMoonBirds')
+var MoonbirdsCP = artifacts.require('MoonbirdsCP')
 
 module.exports = function (deployer) {
   // deployment steps
-  deployer.deploy(MyMoonBirds)
+  deployer.deploy(MoonbirdsCP)
 }
