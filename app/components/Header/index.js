@@ -6,7 +6,7 @@ import { MenuIcon } from '@heroicons/react/outline'
 import Modal from 'react-modal'
 import { useAppContext } from '../../context/context'
 import { classNames } from '../../utils/classNames'
-import { modalStyles } from '../../lib/ModalStyles';
+import { modalStyles } from '../../lib/ModalStyles'
 import Logo from './Logo'
 import { MintModal } from '../index'
 

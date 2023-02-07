@@ -12,13 +12,7 @@ const styles = {
 const NFTDisplay = () => {
   const { nftData } = useAppContext()
 
-  const nfts = [
-    '/3574.png',
-    '/4697.png',
-    '/5344.png',
-    '/8294.png',
-    '/8976.png',
-  ]
+  const nfts = ['/3574.png', '/4697.png', '/5344.png', '/8294.png', '/8976.png']
 
   return (
     <div className={styles.wrapper}>

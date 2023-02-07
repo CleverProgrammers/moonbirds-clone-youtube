@@ -18,17 +18,18 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     if (!moonBirdsContractInstance) return
+    console.log('lol')
     getUris()
   }, [moonBirdsContractInstance])
 
   const getUris = async () => {
     setNftData([])
     const URIs = await moonBirdsContractInstance.methods.getNftUris().call()
-
+    console.log(URIs, '🔥')
     URIs.map(async uri => {
-      const res = await fetch(`http://ipfs.io/ipfs/${uri.substring(33)}`)
+      const res = await fetch(`http://ipfs.io/ipfs/${uri}`)
       const data = await res.json()
-
+      console.log(data)
       setNftData(prevState => [...prevState, data])
     })
   }
