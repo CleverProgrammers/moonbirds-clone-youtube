@@ -15,7 +15,6 @@ const Home = () => {
 
   if (currentWalletAddress === '') {
     return <Login />
-
   } else {
     return (
       <div className={styles.wrapper}>

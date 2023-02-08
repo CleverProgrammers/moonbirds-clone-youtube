@@ -5,7 +5,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { MenuIcon } from '@heroicons/react/outline'
 import Modal from 'react-modal'
 import { classNames } from '../../utils/classNames'
-import { modalStyles } from '../../lib/ModalStyles';
+import { modalStyles } from '../../lib/ModalStyles'
 import Logo from './Logo'
 import { MintModal } from '../index'
 
@@ -53,9 +53,7 @@ const Header = () => {
           <Link href='/?mint=1'>
             <li className={styles.navItem}>Mint</li>
           </Link>
-          <div className={styles.navItem}>
-            Get URIs
-          </div>
+          <div className={styles.navItem}>Get URIs</div>
         </ul>
 
         <Menu as='div' className={styles.menuBox}>

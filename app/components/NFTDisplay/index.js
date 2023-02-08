@@ -9,19 +9,17 @@ const styles = {
 }
 
 const NFTDisplay = () => {
-  const nfts = [
-    '/3574.png',
-    '/4697.png',
-    '/5344.png',
-    '/8294.png',
-    '/8976.png',
-  ]
+  const nfts = ['/3574.png', '/4697.png', '/5344.png', '/8294.png', '/8976.png']
 
   return (
     <div className={styles.wrapper}>
       {nfts.map((nft, index) => (
         <div key={index} className={styles.imageContainer}>
-          <Image className={styles.nftImage} src={`/images${nft}`} layout='fill' />
+          <Image
+            className={styles.nftImage}
+            src={`/images${nft}`}
+            layout='fill'
+          />
         </div>
       ))}
     </div>
