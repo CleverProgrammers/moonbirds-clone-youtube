@@ -1,6 +1,6 @@
 import FullABI from './MyMoonBirds.json'
 
-const contractAddress = '0x63917B75794ae9173C16767e0f3e57F4858f25E0'
+const contractAddress = '0xe567798ADB6f5FaE00590ffb17F5e30B13775077'
 const contractABI = FullABI.abi
 
 export { contractAddress, contractABI }
