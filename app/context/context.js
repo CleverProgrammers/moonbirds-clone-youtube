@@ -18,7 +18,6 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     if (!moonBirdsContractInstance) return
-    console.log('lol')
     getUris()
   }, [moonBirdsContractInstance])
 
